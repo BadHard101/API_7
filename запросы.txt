@@ -1,0 +1,50 @@
+{info}
+
+mutation {
+  add_book(
+    id: 10
+    title: "To Kill a Mockingbird"
+    author: "Harper Lee",
+    genre: "Triller"
+  ) {
+    id
+  }
+}
+
+query {
+  books {
+    id,
+    title
+  }
+}
+
+mutation {
+  update_bookd(
+    id: 3,
+    title: "1984",
+    author: "George Orwell",
+    genre: "Comedy"
+  ) {
+    id,
+    title,
+    author,
+    genre
+  }
+}
+
+mutation {
+  delete_book(
+    id: 1
+  ) {
+    id,
+    title,
+    author,
+    genre
+  }
+}
+
+{
+  books {
+    id, author, title, genre
+  }
+}
